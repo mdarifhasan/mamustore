@@ -1,0 +1,31 @@
+/*====== Header search form=====*/
+.header-search {
+  border: 0.1px solid rgba(0, 0, 0, 0.4);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4rem;
+  background-color: #efefef;
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input {
+    padding: 0.4rem 1rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    width: 50.7rem;
+    height: 3rem;
+  }
+  button {
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    i {
+      margin-right: 1rem;
+    }
+  }
+  @include desktop {
+    display: none;
+  }
+}

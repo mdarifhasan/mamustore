@@ -1,0 +1,80 @@
+.footer-top {
+  @include flex(start, center);
+  flex-wrap: wrap;
+  padding: 5rem 0;
+
+  .left {
+    flex-basis: 40%;
+    padding-right: 4rem;
+    border-right: 1px solid rgba(256, 256, 256, 0.5);
+
+    .logo {
+      width: 22rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+    @include desktop {
+      flex-basis: 100%;
+      border: none;
+      margin: 2rem 0;
+    }
+  }
+  .right {
+    flex-basis: 60%;
+    padding-left: 4rem;
+    @include flex(space-between, start);
+    flex-wrap: wrap;
+    .footer-widget {
+      margin: 2rem 0;
+      padding: 0 2rem;
+      h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        color: $white;
+      }
+      ul {
+        li {
+          a {
+            font-size: 1.4rem;
+            color: $white;
+            text-transform: capitalize;
+            font-weight: 400;
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+      .newsletter {
+        @include flex(start, start);
+        flex-direction: column;
+        input {
+          background-color: rgba(256, 256, 250, 0.2);
+          border: none;
+          outline: none;
+          font-family: $heading-font;
+          padding: 0.4rem 1rem;
+          color: $white;
+          font-size: 1.3rem;
+        }
+        .submit {
+          margin: 1rem 0;
+          cursor: pointer;
+          color: $white;
+          border: 2px solid $white;
+          background-color: $black;
+          padding: 1rem 3rem;
+        }
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    @include desktop {
+      flex-basis: 100%;
+    }
+  }
+}

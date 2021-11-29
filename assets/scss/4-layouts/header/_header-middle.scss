@@ -1,0 +1,9 @@
+.header-middle {
+  width: 100vw;
+  @include flex(space-between, center);
+  padding: 1.5rem 6%;
+}
+@import "logo";
+
+@import "toggle-menu";
+@import "header-icons";

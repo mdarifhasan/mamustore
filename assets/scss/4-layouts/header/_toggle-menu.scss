@@ -1,0 +1,36 @@
+.toggle-menu {
+  display: none;
+  margin-right: 2rem;
+
+  .bar {
+    height: 0.2rem;
+    background-color: $primary-color;
+    margin: 0.3rem 0;
+    &:first-child {
+      width: 3rem;
+    }
+    &:last-child {
+      width: 2.7rem;
+    }
+    &:nth-child(2) {
+      width: 2.4rem;
+    }
+  }
+  &.active {
+    .bar {
+      width: 2.5rem;
+      &:first-child {
+        transform: rotate(45deg) translate(7px, -2px);
+      }
+      &:last-child {
+        transform: rotate(-45deg) translate(5px, 3px);
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+  @include tablet {
+    display: inline-block;
+  }
+}

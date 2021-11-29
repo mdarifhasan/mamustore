@@ -1,0 +1,59 @@
+.header-nav {
+  position: relative;
+
+  ul {
+    @include flex(space-between, center);
+    li {
+      a {
+        padding: 0.5rem 1rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  .menu-close {
+    display: none;
+    position: absolute;
+    top: 5%;
+    right: 8%;
+  }
+  @include tablet {
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    ul {
+      flex-direction: column;
+      margin-top: 8rem;
+      align-items: center;
+
+      li {
+        a {
+          padding: 1rem 0;
+          font-size: 1.8rem;
+          display: inline-block;
+          color: $primary-color;
+        }
+      }
+    }
+    .menu-close {
+      display: block;
+      position: absolute;
+      top: 3%;
+      right: 5%;
+      font-size: 3rem;
+    }
+    &.active {
+      left: 0;
+      box-shadow: $dark-shadow;
+    }
+  }
+}

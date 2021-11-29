@@ -1,0 +1,53 @@
+.header-icons {
+  @include flex(space-between, center);
+  position: relative;
+  .icon-box {
+    width: 30%;
+    margin-right: 1.5rem;
+    img {
+      cursor: pointer;
+      width: 90%;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .cart-count {
+      background-color: red;
+      position: absolute;
+      width: 2.5rem;
+      height: 2.5rem;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+      top: -25%;
+      right: -3%;
+      color: $white;
+      font-weight: 600;
+      background-color: $secondary-color;
+    }
+  }
+
+  .mobile-search {
+    display: none;
+    color: $white;
+    background-color: $black;
+    padding: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+  @include desktop {
+    .mobile-search {
+      display: block;
+    }
+  }
+  @include tablet {
+    .mobile-search {
+      display: none;
+    }
+  }
+}

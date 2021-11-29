@@ -1,0 +1,16 @@
+.footer-bootom {
+  @include flex(center, center);
+  .copyright-text {
+    padding: 1.5rem;
+    border-top: 1px solid #3f3d3d;
+    border-right: 1px solid #3f3d3d;
+    border-left: 1px solid #3f3d3d;
+    p {
+      font-size: 1.6rem;
+      color: $white;
+      a {
+        color: $secondary-color;
+      }
+    }
+  }
+}

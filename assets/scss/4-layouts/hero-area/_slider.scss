@@ -1,0 +1,85 @@
+.hero-slider-container {
+  .slider {
+    display: block;
+    height: 80vh;
+    padding: 0 6%;
+    background-position: center;
+    background-size: cover;
+
+    .slider-content {
+      @include flex(center, start);
+      flex-direction: column;
+      height: 100%;
+      .offer {
+        margin: 2rem 0;
+        h2 {
+          display: inline-block;
+          color: $third-color;
+          font-size: 3rem;
+          font-weight: 500;
+        }
+        span {
+          background: linear-gradient(
+            90deg,
+            $primary-color -50%,
+            transparent 80%
+          );
+          padding: 1rem;
+          border-radius: 3rem;
+          color: $primary-color;
+          font-weight: 600;
+          font-size: 1.8rem;
+          margin-left: 1rem;
+        }
+      }
+      .title {
+        font-size: 4.4rem;
+        color: $black;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .sub-title {
+        font-size: 1.4rem;
+        color: $black;
+      }
+      a.btn {
+        display: inline-block;
+        margin: 2rem 0;
+      }
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 10%;
+    li {
+      font-size: 2.4rem;
+      color: $black;
+      font-weight: 600;
+      position: relative;
+
+      color: $black;
+      margin: 0 3rem;
+
+      &::before {
+        content: "";
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 250%;
+        transform: translate(-50%, -50%);
+        width: 3rem;
+        height: 0.3rem;
+        background: $black;
+        display: block;
+      }
+      &:last-child::after {
+        display: none;
+      }
+      &.slick-active {
+        color: $primary-color;
+      }
+    }
+  }
+}

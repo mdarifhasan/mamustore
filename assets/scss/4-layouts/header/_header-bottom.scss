@@ -1,0 +1,24 @@
+.header-bottom {
+  @include flex(space-between, center);
+  padding: 1rem 6%;
+  background-color: $primary-color;
+  width: 100vw;
+  .mobile-search {
+    display: none;
+  }
+  @include tablet {
+    .mobile-search {
+      display: block;
+      color: $white;
+      background-color: $black;
+      padding: 1rem;
+      border-radius: 50%;
+      text-align: center;
+      height: 4rem;
+      width: 4rem;
+      cursor: pointer;
+    }
+  }
+}
+@import "category-menu";
+@import "nav";

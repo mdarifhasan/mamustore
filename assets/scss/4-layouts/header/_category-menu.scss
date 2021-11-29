@@ -1,0 +1,59 @@
+.category-menu {
+  .toggle {
+    cursor: pointer;
+    @include flex(space-between, center);
+    i {
+      color: $white;
+      font-size: 2rem;
+    }
+    h3 {
+      margin: 0 1rem;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: $white;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
+  .category-nav {
+    position: fixed;
+    top: 0;
+    left: -200%;
+
+    transition: 0.4s ease-in-out;
+    background-color: $white;
+    height: 100%;
+    width: 30rem;
+
+    box-shadow: $dark-shadow;
+    @include flex(center, center);
+    .menu-close {
+      position: absolute;
+      top: 5%;
+      right: 8%;
+      i {
+        font-size: 2.5rem;
+        color: $black;
+        cursor: pointer;
+      }
+    }
+    ul {
+      li {
+        a {
+          font-size: 1.8rem;
+          text-transform: capitalize;
+          color: $primary-color;
+          padding: 0.8rem 0;
+          display: inline-block;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    &.active {
+      left: 0;
+    }
+  }
+}

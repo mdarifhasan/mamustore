@@ -1,0 +1,8 @@
+#footer {
+  background-color: $black;
+  padding: 0 6%;
+  max-width: 144rem;
+}
+@import "footer-top";
+@import "footer-bottom";
+@import "newsletter";
